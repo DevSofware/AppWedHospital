@@ -2,8 +2,9 @@ import Vue from 'vue'
 import App from './App.vue'
 import Router from './Router'
 import BootstrapVue from 'bootstrap-vue';
-
+import 'bootstrap/dist/css/bootstrap.min.css'
 import HTTP from './core/Services/http-services';
+import '@/assets/css/main.css'
 
 Vue.config.productionTip = false
 Vue.use(BootstrapVue);

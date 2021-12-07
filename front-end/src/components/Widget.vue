@@ -1,7 +1,7 @@
 <template>    
 <section ref="widget">
   <b-navbar toggleable="lg" type="dark" variant="info">
-    <b-navbar-brand @click="$router.push('/')">NavBar</b-navbar-brand>
+    <b-navbar-brand @click="$router.push('/')">Hospital Acme</b-navbar-brand>
 
     <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
@@ -12,8 +12,8 @@
           <template #button-content>
             <em>User</em>
           </template>
-          <b-dropdown-item @click="$router.push('/login')" >Profile</b-dropdown-item>
-          <b-dropdown-item href="#">Sign Out</b-dropdown-item>
+          <b-dropdown-item @click="$router.push('/login')" >Perfil</b-dropdown-item>
+          <b-dropdown-item href="#">Cerrar sesion</b-dropdown-item>
         </b-nav-item-dropdown>
       </b-navbar-nav>
     </b-collapse>

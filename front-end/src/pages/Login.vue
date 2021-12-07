@@ -1,57 +1,52 @@
 <template>
-    <div>
-        <widget>
-        </widget>
-        <p></p>
+<div>
+    <widget>
+    </widget>
+    <p> </p>
+    <div class="vue-template ">
+        <form>
+            <h3>Sign In</h3>
 
-            <div class="auth-page">
-                <b-container>
-                    
-                    <h5 class="auth-logo">
-                        <i class="fa fa-circle text-primary"></i>
-                        Sing App
-                        <i class="fa fa-circle text-danger"></i>
-                    </h5>
-                        <b-form @submit.prevent="Login">
-                            <p class="widget-auth-info">
-                                Use your email to sign in.
-                            </p>
-                            <div class="form-group">
-                                <input class="form-control no-border" v-model="model.email" type="text" name="email" placeholder="Email" required />
-                            </div>
-                            <div class="form-group">
-                                <input class="form-control no-border" v-model="model.password" type="password" name="password" placeholder="Password" required />
-                            </div>
-                            <b-button type="submit" size="sm" class="auth-btn mb-3" variant="inverse">Login</b-button>
-                            <div v-show="loading" class="text-center"><b-spinner label="Spinning" small></b-spinner></div>
-                        </b-form>
-                </b-container>        
+            <div class="form-group">
+                <label>Email address</label>
+                <input type="email" class="form-control form-control-lg" />
             </div>
-    </div>
 
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password" class="form-control form-control-lg" />
+            </div>
+
+            <button type="submit" class="btn btn-dark btn-lg btn-block">Sign In</button>
+
+            <p class="forgot-password text-center mt-2 mb-4">
+                <router-link to="/forgot-password">Forgot password ?</router-link>
+            </p>
+
+            <div class="social-icons">
+                <ul>
+                    <li><a href="#"><i class="fa fa-google"></i></a></li>
+                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                </ul>
+            </div>
+
+        </form>
+    </div>
+</div>   
 </template>
 
 <script>
 import widget from '@/components/Widget.vue';
-export default {
-  components: { widget },
-        name: 'LoginPage',
+//import Widget from '../components/Widget.vue'
+    export default {
+        components: { widget },
+        name: 'Login',
         data() {
-            return {
-                model: {
-                    email: '',
-                    password: ''
-                },
-                loading: false,
-            };
+            return{};
         },
         methods: {
-            Login() {
-                this.loading = true;
-                this.loading = false;
-
-                
-            },
+            
         },
-    };
+    }
 </script>
