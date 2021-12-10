@@ -37,6 +37,7 @@ html,
   display: flex;
   flex-direction: column;
   justify-content: center;
+  text-align: left;
   align-items: center;
   display: inline-block;
   vertical-align: middle;
