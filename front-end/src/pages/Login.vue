@@ -1,26 +1,23 @@
 <template>
-<div>
-    <widget>
-    </widget>
-    <p> </p>
-    <div class="vue-template ">
-        <form>
-            <h3>Sign In</h3>
+<div id="divPadre">
+    <div class="vue-tempalte" id="divHijo">
+        <form class="form">
+            <h3>Iniciar sesión</h3>
 
             <div class="form-group">
-                <label>Email address</label>
+                <label>Correo electrónico</label>
                 <input type="email" class="form-control form-control-lg" />
             </div>
 
             <div class="form-group">
-                <label>Password</label>
+                <label>Contraseña</label>
                 <input type="password" class="form-control form-control-lg" />
             </div>
 
-            <button type="submit" class="btn btn-dark btn-lg btn-block">Sign In</button>
+            <button type="submit" class="btn btn-dark btn-lg btn-block">Ingresar</button>
 
-            <p class="forgot-password text-center mt-2 mb-4">
-                <router-link to="/forgot-password">Forgot password ?</router-link>
+            <p class="forgot-password text-right mt-2 mb-4">
+                <router-link to="/forgot-password">Olvidaste la contraseña?</router-link>
             </p>
 
             <div class="social-icons">
@@ -33,20 +30,30 @@
 
         </form>
     </div>
-</div>   
+</div>
 </template>
 
 <script>
-import widget from '@/components/Widget.vue';
-//import Widget from '../components/Widget.vue'
-    export default {
-        components: { widget },
-        name: 'Login',
+export default {
+        name: 'LoginPage',
         data() {
-            return{};
+            return {
+                model: {
+                    email: '',
+                    password: ''
+                },
+                loading: false,
+            };
         },
         methods: {
-            
+            Login() {
+                this.loading = true;
+                this.loading = false;
+
+                
+            },
         },
-    }
+    };
 </script>
+
+<style src="@/assets/css/main.css" lang="css" />
