@@ -1,6 +1,6 @@
 <template>    
 <section ref="widget">
-  <b-navbar toggleable="lg" type="dark" variant="info">
+  <b-navbar toggleable="lg" type="dark" variant="dark">
     <b-navbar-brand @click="$router.push('/')">Hospital Acme</b-navbar-brand>
 
     <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
