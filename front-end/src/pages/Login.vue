@@ -41,8 +41,8 @@ export default {
         data() {
             return {
                 model: {
-                    email: 'Medico1@gmail.com',
-                    password: '123'
+                    email: 'prueba2@hotmail.com',
+                    password: '1234'
                 },
                 loading: false,
             };
@@ -51,7 +51,7 @@ export default {
             Login() {
                 HTTP.defaults.withCredentials = true;
                 HTTP.get('sanctum/csrf-cookie').then(() => {
-                    HTTP.post("login",this.modal).then(res=>{
+                    HTTP.post("login",this.model).then(res=>{
                     console.log(res);
                 });
                 });
