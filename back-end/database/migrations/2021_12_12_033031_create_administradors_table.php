@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateAuxiliaresTable extends Migration
+class CreateAdministradorsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,16 @@ class CreateAuxiliaresTable extends Migration
      */
     public function up()
     {
-        Schema::create('auxiliares', function (Blueprint $table) {
-            $table->id();
+        Schema::create('administradors', function (Blueprint $table) {
+            $table->bigInteger('id');
             $table->string('Nombre',100)->nullable();
             $table->string('Apellido',100)->nullable();
-            $table->Integer('CC')->unsigned()->nullable();
+            $table->Integer('CC')->nullable();
+            $table->bigInteger('id_user');
+           $table->foreign('id_user')->references('id')->on('usuarios');
+           $table->primary('id');
+
+
         });
     }
 
@@ -28,6 +33,6 @@ class CreateAuxiliaresTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('auxiliares');
+        Schema::dropIfExists('administradors');
     }
 }

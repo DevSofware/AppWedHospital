@@ -14,7 +14,7 @@
                 <input type="password" class="form-control form-control-lg" />
             </div>
 
-            <button type="submit" class="btn btn-dark btn-lg btn-block">Ingresar</button>
+            <button @click="Login" class="btn btn-dark btn-lg btn-block">Ingresar</button>
 
             <p class="forgot-password text-right mt-2 mb-4">
                 <router-link to="/forgot-password">Olvidaste la contraseña?</router-link>
@@ -34,21 +34,27 @@
 </template>
 
 <script>
+import {HTTP} from "@/core/Services/http-services.js"
+
 export default {
         name: 'LoginPage',
         data() {
             return {
                 model: {
-                    email: '',
-                    password: ''
+                    email: 'Medico1@gmail.com',
+                    password: '123'
                 },
                 loading: false,
             };
         },
         methods: {
             Login() {
-                this.loading = true;
-                this.loading = false;
+                HTTP.defaults.withCredentials = true;
+                HTTP.get('sanctum/csrf-cookie').then(() => {
+                    HTTP.post("login",this.modal).then(res=>{
+                    console.log(res);
+                });
+                });
 
                 
             },

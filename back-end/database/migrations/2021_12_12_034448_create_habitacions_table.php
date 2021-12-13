@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateHabitacionesTable extends Migration
+class CreateHabitacionsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,14 @@ class CreateHabitacionesTable extends Migration
      */
     public function up()
     {
-        Schema::create('habitaciones', function (Blueprint $table) {
-            $table->id();
+        Schema::create('habitacions', function (Blueprint $table) {
+            $table->bigInteger('id');
             $table->enum('Estado', ['Libre', 'Ocupado','Mantenimiento'])->nullable()->default('Libre');
+            $table->bigInteger('id_paciente');
+            $table->foreign('id_paciente')->references('id')->on('Pacientes');
+           $table->primary('id');
+
+
         });
     }
 
@@ -26,6 +31,6 @@ class CreateHabitacionesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('habitaciones');
+        Schema::dropIfExists('habitacions');
     }
 }
