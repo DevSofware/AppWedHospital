@@ -70,7 +70,7 @@
           <b-col >
           </b-col>
           <b-col>
-             <div><b-table  class="table table-striped table-bordered table-lg mb-0 requests-table" :items="medicos"   key="medicos" ></b-table></div>
+             <div><b-table   class="table table-striped " :items="medicos"   key="medicos" ></b-table></div>
 
           </b-col>
           <b-col>

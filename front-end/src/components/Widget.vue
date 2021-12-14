@@ -1,6 +1,6 @@
 <template>
   <section ref="widget">
-    <b-navbar toggleable="lg" type="dark" variant="Info">
+    <b-navbar toggleable="lg" type="dark" variant="info">
       <b-navbar-brand @click="$router.push('/')">Hospital Acme</b-navbar-brand>
       <b-navbar-nav >
         <b-nav-item  @click="$router.push('/SignDoctor')">Doctores</b-nav-item>

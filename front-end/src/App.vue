@@ -4,7 +4,7 @@
   </widget>
   <br>
   <br>
-  <router-view  style=""/>
+  <router-view id="content"  style=""/>
 
 </div>
 
