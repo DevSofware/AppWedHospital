@@ -13,9 +13,22 @@ class PacienteController extends Controller
     }
     public function create(){
     }
-    public function store(paciente $request)
+       /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request  $request)
     {
-        paciente::create($request->validated());
+        paciente::create([
+            'Nombre'=> $request['Nombre'],
+            'Apellido'=>$request['Apellido'],
+            'CC'=>$request['CC'],
+            'Edad'=>$request['Edad'],
+            'Motivo' =>$request['Motivo'],
+        ]);
+
         return back()->with('status', 'paciente generada con éxito');
     }
     public function edit(){

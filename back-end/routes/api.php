@@ -15,6 +15,16 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('medicoIndex','MedicoController@index');
-Route::get('medicoSave','MedicoController@store');
+Route::post('medicoSave','MedicoController@store');
 
-Route::get('usuario','UsuarioController@index');
+Route::get('usuarioIndex','UsuarioController@index');
+Route::post('usuarioSave','UsuarioController@store');
+
+Route::get('pacienteIndex','PacienteController@index');
+Route::post('pacienteSave','PacienteController@store');
+
+Route::get('administradorIndex','AdministradorController@index');
+Route::post('administradorSave','AdministradorController@store');
+
+Route::get('AuxiliarIndex','AuxiliarController@index');
+Route::post('AuxiliarSave','AuxiliarController@store');

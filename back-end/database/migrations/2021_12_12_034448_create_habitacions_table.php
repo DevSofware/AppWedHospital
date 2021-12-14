@@ -14,11 +14,10 @@ class CreateHabitacionsTable extends Migration
     public function up()
     {
         Schema::create('habitacions', function (Blueprint $table) {
-            $table->bigInteger('id');
+            $table->id('id');
             $table->enum('Estado', ['Libre', 'Ocupado','Mantenimiento'])->nullable()->default('Libre');
             $table->bigInteger('id_paciente');
-            $table->foreign('id_paciente')->references('id')->on('Pacientes');
-           $table->primary('id');
+          //  $table->foreign('id_paciente')->references('id')->on('Pacientes');
 
 
         });

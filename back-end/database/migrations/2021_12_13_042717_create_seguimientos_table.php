@@ -14,13 +14,11 @@ class CreateSeguimientosTable extends Migration
     public function up()
     {
         Schema::create('seguimientos', function (Blueprint $table) {
-            $table->bigInteger('id');
-            $table->bigInteger('id_paciente');
+            $table->id('id');            $table->bigInteger('id_paciente');
             $table->bigInteger('id_medico');
-            $table->foreign('id_paciente')->references('id')->on('Pacientes');
-            $table->foreign('id_medico')->references('id')->on('medicos');
+        //    $table->foreign('id_paciente')->references('id')->on('Pacientes');
+          //  $table->foreign('id_medico')->references('id')->on('medicos');
             $table->string('Tratamiento',100)->nullable();
-            $table->primary('id');
 
         });
     }

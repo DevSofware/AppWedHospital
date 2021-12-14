@@ -14,16 +14,13 @@ class CreatePacientesTable extends Migration
     public function up()
     {
         Schema::create('Pacientes', function (Blueprint $table) {
-            $table->bigInteger('id');
-            $table->string('Nombre',100)->nullable();
-            $table->string('Apellido',100)->nullable();
-            $table->Integer('CC')->nullable();
+            $table->id('id');
+            $table->string('Nombre', 100)->nullable();
+            $table->string('Apellido', 100)->nullable();
             $table->Integer('Edad')->unsigned()->nullable();
-            $table->string('Motivo',400)->nullable();
-            $table->primary('id');
-
-
+            $table->string('Motivo', 400)->nullable();
         });
+    
     }
 
     /**
