@@ -3,9 +3,11 @@
   }*/
   
   body {
-    background: #1c92d2;  
-    background: -webkit-linear-gradient(to right, #f2fcfe, #1c92d2);  
-    background: linear-gradient(to right, #f2fcfe, #1c92d2);    
+    background: #70e1f5;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #ffd194, #004FF9);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom,  #004FF9,#ffd194); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+    
     font-weight: 400;
     min-height: 100vh;
   }

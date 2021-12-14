@@ -39,16 +39,29 @@ export default {
         data() {
             return {
                 model: {
+<<<<<<< Updated upstream
                     email: '',
                     password: ''
+=======
+                    email: 'Medico1@gmail.com',
+                    password: '123'
+>>>>>>> Stashed changes
                 },
                 loading: false,
             };
         },
         methods: {
             Login() {
+<<<<<<< Updated upstream
                 this.loading = true;
                 this.loading = false;
+=======
+                HTTP.get('sanctum/csrf-cookie').then(() => {
+                    HTTP.post("login",this.model).then(res=>{
+                    console.log(res);
+                });
+                });
+>>>>>>> Stashed changes
 
                 
             },

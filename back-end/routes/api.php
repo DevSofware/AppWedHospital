@@ -14,6 +14,23 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+<<<<<<< Updated upstream
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+=======
+Route::get('medicoIndex','MedicoController@index');
+Route::post('medicoSave','MedicoController@store');
+
+Route::get('usuarioIndex','UsuarioController@index');
+Route::post('usuarioSave','UsuarioController@store');
+
+Route::get('pacienteIndex','PacienteController@index');
+Route::post('pacienteSave','PacienteController@store');
+
+Route::get('administradorIndex','AdministradorController@index');
+Route::post('administradorSave','AdministradorController@store');
+
+Route::get('AuxiliarIndex','AuxiliarController@index');
+Route::post('AuxiliarSave','AuxiliarController@store');
+>>>>>>> Stashed changes
