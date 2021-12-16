@@ -66,16 +66,6 @@
 
       </form>
 
-      <b-row>
-          <b-col >
-          </b-col>
-          <b-col>
-             <div><b-table   class="table table-striped " :items="medicos"   key="medicos" ></b-table></div>
-
-          </b-col>
-          <b-col>
-          </b-col>
-      </b-row>
 
 
     </div>
@@ -83,7 +73,6 @@
 </template>
 
 <script>
-import { HTTP } from "@/core/Services/http-services.js";
 
 import { Usuario } from "@/core/Model/Usuario.js";
 export default {
@@ -110,12 +99,7 @@ export default {
     this.getMedico();
   },
   methods: {
-    getMedico() {
-      HTTP.get("api/medicoIndex").then((res) => {
-        console.log(res);
-        this.medicos = res.data.data;
-      });
-    },
+    
     Signpatient() {
       let medico = new Usuario(this.model, "Medico");
       medico.Guarda();

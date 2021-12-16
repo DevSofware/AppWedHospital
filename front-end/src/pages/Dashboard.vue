@@ -9,6 +9,8 @@
         <b-tabs card>
           <b-tab title="Medicos" active>
             <b-table striped hover :items="medicos"></b-table>
+          
+                
           </b-tab>
           <b-tab title="Pacientes">
             <b-table striped hover :items="pacientes"></b-table>
