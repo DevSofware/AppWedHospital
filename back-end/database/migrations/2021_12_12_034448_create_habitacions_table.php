@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateHabitacionesTable extends Migration
+class CreateHabitacionsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -30,6 +30,6 @@ class CreateHabitacionesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('habitaciones');
+        Schema::dropIfExists('habitacions');
     }
 }

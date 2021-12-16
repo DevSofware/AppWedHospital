@@ -9,6 +9,7 @@ class MedicoController extends Controller
 {
     public function index(){
         return medico::orderBy('id','DESC')->paginate();
+        
     }
    
     public function create(){

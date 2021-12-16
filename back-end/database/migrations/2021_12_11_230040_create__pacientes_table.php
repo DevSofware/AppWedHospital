@@ -20,6 +20,7 @@ class CreatePacientesTable extends Migration
             $table->Integer('Edad')->unsigned()->nullable();
             $table->string('Motivo', 400)->nullable();
         });
+    
     }
 
     /**
